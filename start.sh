@@ -22,28 +22,12 @@ if [ $1 == "uninstall" ]; then
 fi
 
 echo "==========================================="
-echo "Setting up your mac using daemonza/setupmac"
+echo "Setting up your mac"
 echo "==========================================="
 
-sudo easy_install pip
-sudo easy_install ansible
+pip install ansible --user
 
-installdir="/tmp/setupmac-$RANDOM"
-mkdir $installdir
-
-git clone https://github.com/daemonza/setupmac.git $installdir 
-if [ ! -d $installdir ]; then
-    echo "failed to find setupmac."
-    echo "git cloned failed"
-    exit 1
-else
-    cd $installdir 
-    ansible-playbook -i ./hosts playbook.yml --verbose
-fi
-
-echo "cleaning up..."
-
-rm -Rfv /tmp/$installdir
+ansible-playbook -i ./hosts playbook.yml --verbose
 
 echo "and we are done! Enjoy!"
 
