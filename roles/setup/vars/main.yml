@@ -13,6 +13,8 @@ applications:
   - zsh
   - vim
   - terraform
+  - pyenv
+  - awscli
 
 # homebrew cask applications
 cask_applications:
