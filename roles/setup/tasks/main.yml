@@ -1,3 +1,6 @@
+- name: sudoers
+  include: sudoers.yml
+
 - name: application installs
   include: apps.yml 
 
@@ -6,3 +9,6 @@
 
 - name: dotfiles
   include: dotfiles.yml
+
+- name: sudoers
+  include: sudoers.yml

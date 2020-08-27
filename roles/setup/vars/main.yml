@@ -22,6 +22,10 @@ cask_applications:
   - 1password
   - virtualbox
   - spotify
+  - google-drive-file-stream
+  - visual-studio-code
+  - skype
+  - slack
 
 downloads:
 
